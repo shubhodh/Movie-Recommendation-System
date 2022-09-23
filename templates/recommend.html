@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="../static/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Secular+One&display=swap");
+      .tb {
+        margin: auto auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 250%;
+        margin-top: 4rem;
+        color: orangered;
+      }
+
+      td {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 135%;
+        text-align: left;
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="color: white">
+    <div class="">
+      <h1 style="font-family: 'Secular One', sans-serif">Recommended Movies for {{ mo }}</h1>
+      <table class="tb">
+        <thead>
+          <tr>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for movie in movies %}
+          <tr>
+            <td>{{ movie }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
